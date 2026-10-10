@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIÈRE — Кинотеатр</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-container">
+        <h1 class="logo">LUMIÈRE</h1>
+        <button class="location-button">Москва, ТЦ Неглинная</button>
+
+        <nav class="navigation">
+            <a href="#dates" class="nav-link active">Афиша</a>
+            <a href="#premieres" class="nav-link">Премьеры</a>
+            <a href="#vip" class="nav-link">VIP&amp;Залы</a>
+            <a href="#bar" class="nav-link">Бар &amp; Кухня</a>
+            <a href="#offers" class="nav-link">Акции</a>
+        </nav>
+
+        <button class="search-button" aria-label="Поиск">⌕</button>
+        <button class="buy-button">Купить билет</button>
+        <img class="profile-icon" src="images/Profile.svg" alt="Профиль">
+    </div>
+</header>
+
+<main>
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero">
+        <div class="container hero-container">
+
+            <div class="hero-content">
+
+                <div class="badges">
+                    <span class="badge badge-yellow">✦ ЭКСКЛЮЗИВ IMAX LASER</span>
+                    <span class="badge">★ 8.9 IMDb</span>
+                    <span class="badge">16+</span>
+                    <span class="badge badge-red">Премьера сегодня в 20:00</span>
+                </div>
+
+                <p class="eyebrow">ПРЕМЬЕРНЫЙ БЛОКБАСТЕР СЕЗОНА</p>
+
+                <h2 class="hero-title">
+                    Дюна: Хроники <span>Вселенной</span>
+                </h2>
+
+                <p class="hero-description">
+                    Решающая битва за колыбель пряности. Беспрецедентный масштаб
+                    съёмок на камеры IMAX 65 мм, погружающий аудиоряд и личное
+                    присутствие в самом сердце песчаной бури Арракиса.
+                </p>
+
+                <div class="features">
+                    <span>▣ 4K Dual Laser 150 fps</span>
+                    <span>▣ Dolby Atmos 64 Ch</span>
+                    <span>▱ Итальянские реклайнеры Poltrona Frau</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#dates" class="primary-button">
+                        ▣ Выбрать места от 850 ₽
+                    </a>
+
+                    <a href="#trailer" class="secondary-button">
+                        <span class="play-icon">▶</span>
+                        Смотреть трейлер (4K)
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- ХИТЫ НЕДЕЛИ -->
+            <aside class="weekly-hits">
+
+                <div class="hits-heading">
+                    <span>ХИТЫ НЕДЕЛИ</span>
+                    <span class="open-status">Сеансы открыты</span>
+                </div>
+
+                <article class="hit-card">
+                    <div class="movie-poster dune-poster">
+                        <img src="images/dune.jpg"
+                             alt="Дюна: Хроники Вселенной"
+                             loading="lazy">
+                    </div>
+
+                    <div class="hit-info">
+                        <div class="hit-meta">
+                            <span class="now-badge">СЕЙЧАС</span>
+                            <span>2ч 45мин</span>
+                        </div>
+
+                        <h3>Дюна: Хроники Вселенной</h3>
+                        <p>IMAX Laser · Ближайший 20:00</p>
+                    </div>
+                </article>
+
+                <article class="hit-card">
+                    <div class="movie-poster oppenheimer-poster">
+                        <img src="images/oppenheimer.jpg"
+                             alt="Оппенгеймер: Эпилог"
+                             loading="lazy">
+                    </div>
+
+                    <div class="hit-info">
+                        <div class="hit-meta">
+                            <span class="small-badge">70MM FILM</span>
+                            <span>3ч 00мин</span>
+                        </div>
+
+                        <h3>Оппенгеймер: Эпилог</h3>
+                        <p>VIP Premier · Сеанс 21:15</p>
+                    </div>
+                </article>
+
+                <article class="hit-card">
+                    <div class="movie-poster interstellar-poster">
+                        <img src="images/interstellar.jpg"
+                             alt="Интерстеллар: 10th Anniv."
+                             loading="lazy">
+                    </div>
+
+                    <div class="hit-info">
+                        <div class="hit-meta">
+                            <span class="small-badge">RE-RELEASE</span>
+                            <span>2ч 49мин</span>
+                        </div>
+
+                        <h3>Интерстеллар: 10th Anniv.</h3>
+                        <p>Dolby Atmos · Сеанс 22:30</p>
+                    </div>
+                </article>
+
+                <article class="hit-card">
+                    <div class="movie-poster cyberpunk-poster">
+                        <img src="images/cyberpunk.jpg"
+                             alt="Киберпанк: Неоновый город"
+                             loading="lazy">
+                    </div>
+
+                    <div class="hit-info">
+                        <div class="hit-meta">
+                            <span class="prediction-badge">ПРЕДПОКАЗ</span>
+                            <span>2ч 18мин</span>
+                        </div>
+
+                        <h3>Киберпанк: Неоновый город</h3>
+                        <p>VIP Bed Cinema · 23:45</p>
+                    </div>
+                </article>
+
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- ДАТЫ И ФИЛЬТРЫ -->
+    <section class="schedule" id="dates">
+        <div class="container">
+
+            <div class="schedule-top">
+
+                <div class="date-list">
+                    <button class="date-button selected">
+                        <span>СЕГОДНЯ</span>
+                        <strong>24 МАЯ</strong>
+                    </button>
+
+                    <button class="date-button">
+                        <span>СУББОТА</span>
+                        <strong>25 МАЯ</strong>
+                    </button>
+
+                    <button class="date-button">
+                        <span>ВОСКРЕСЕНЬЕ</span>
+                        <strong>26 МАЯ</strong>
+                    </button>
+
+                    <button class="date-button">
+                        <span>ПОНЕДЕЛЬНИК</span>
+                        <strong>27 МАЯ</strong>
+                    </button>
+
+                    <button class="date-button">
+                        <span>ВТОРНИК</span>
+                        <strong>28 МАЯ</strong>
+                    </button>
+
+                    <button class="date-button">
+                        <span>СРЕДА</span>
+                        <strong>29 МАЯ</strong>
+                    </button>
+                </div>
+
+                <input class="movie-search"
+                       type="search"
+                       placeholder="⌕ Поиск фильма, зала, режиссёра...">
+
+            </div>
+
+            <div class="filters">
+
+                <div class="format-filters">
+                    <span class="filter-label">ФОРМАТ:</span>
+
+                    <button class="filter-button selected-filter">Все</button>
+                    <button class="filter-button">IMAX Laser</button>
+                    <button class="filter-button">VIP Lounge</button>
+                    <button class="filter-button">Dolby Atmos</button>
+                    <button class="filter-button">3D Vision</button>
+                </div>
+
+                <div class="extra-filters">
+                    <button class="filter-button">
+                        ◷ Вечер (17:00 — 21:00)
+                    </button>
+
+                    <button class="filter-button">♫ Все жанры</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕГОДНЯ В АФИШЕ -->
+    <section class="repertoire" id="premieres">
+        <div class="container">
+
+            <p class="eyebrow">ПРЕМИАЛЬНЫЙ РЕПЕРТУАР</p>
+            <h2 class="section-title">Сегодня в афише</h2>
+
+            <div class="availability-legend">
+                <span><i class="dot dot-yellow"></i> Много мест</span>
+                <span><i class="dot dot-orange"></i> Осталось мало</span>
+                <span><i class="dot dot-red"></i> Почти распродано</span>
+            </div>
+
+            <article class="repertoire-card">
+
+                <div class="poster-column">
+
+                    <!-- ПОСТЕР ДЮНЫ: ДОБАВЛЕНО ИЗОБРАЖЕНИЕ JUNE.JPG -->
+                    <div class="large-poster">
+
+                        <img
+                            class="large-poster-image"
+                            src="images/june.jpg"
+                            alt="Постер фильма Дюна: Хроники Вселенной"
+                        >
+
+                        <div class="poster-rating">★ 8.9</div>
+                        <div class="poster-age">16+</div>
+
+                        <div class="poster-title">
+                            <span>DUNE</span>
+                            <small>PART CHRONICLES</small>
+                        </div>
+
+                    </div>
+
+                    <p class="poster-caption">
+                        DUNE — PART CHRONICLES
+                    </p>
+
+                    <p class="poster-description">
+                        Пустынный мир, пророчества и судьба галактики
+                        в масштабной истории Lumière.
+                    </p>
+
+                </div>
+
+                <div class="movie-details">
+
+                    <div class="movie-heading">
+
+                        <div>
+                            <h3>Дюна: Хроники Вселенной</h3>
+
+                            <p class="movie-subtitle">
+                                США · Фантастика, Приключения · 165 мин ·
+                                Реж. Дени Вильнёв
+                            </p>
+                        </div>
+
+                        <div class="movie-tags">
+                            <span>IMAX LASER 4K</span>
+                            <span>DOLBY ATMOS</span>
+                        </div>
+
+                    </div>
+
+                    <p class="movie-description">
+                        Пол Атрейдес объединяется с фременами, чтобы вернуть власть
+                        над планетой-пустыней. Колоссальные баталии, психоделические
+                        видения и судьба галактики на гигантском экране Lumière.
+                    </p>
+
+                    <!-- СЕАНСЫ IMAX -->
+                    <div class="session-group">
+
+                        <div class="session-heading">
+                            <strong>🟡 Зал 1 · IMAX Laser (Экран 24м)</strong>
+                            <span>12-канальный иммерсивный звук</span>
+                        </div>
+
+                        <div class="session-list">
+
+                            <div class="session-card">
+                                <span class="session-time">11:30</span>
+                                <i class="dot dot-yellow"></i>
+                                <span>2D Laser 750 ₽</span>
+                            </div>
+
+                            <div class="session-card">
+                                <span class="session-time">14:45</span>
+                                <i class="dot dot-yellow"></i>
+                                <span>2D Laser 950 ₽</span>
+                            </div>
+
+                            <div class="session-card">
+                                <span class="session-time">18:20</span>
+                                <i class="dot dot-orange"></i>
+                                <span>Prime Time 1 200 ₽</span>
+                            </div>
+
+                            <div class="session-card almost-full">
+                                <span class="session-time">21:50</span>
+                                <i class="dot dot-red"></i>
+                                <span>9 мест осталось 1 400 ₽</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- VIP-СЕАНСЫ -->
+                    <div class="session-group vip-group" id="vip">
+
+                        <div class="session-heading">
+                            <strong>▣ Зал VIP · First Class Dining Lounges</strong>
+                            <span class="vip-note">
+                                Кнопка вызова сомелье к креслу
+                            </span>
+                        </div>
+
+                        <div class="session-list">
+
+                            <div class="session-card">
+                                <span class="session-time">16:00</span>
+                                <i class="dot dot-yellow"></i>
+                                <span>Диваны + Меню 2 200 ₽</span>
+                            </div>
+
+                            <div class="session-card">
+                                <span class="session-time">19:30</span>
+                                <i class="dot dot-orange"></i>
+                                <span>VIP Вечер 2 500 ₽</span>
+                            </div>
+
+                            <div class="session-card">
+                                <span class="session-time">22:45</span>
+                                <i class="dot dot-yellow"></i>
+                                <span>VIP Ночь 2 500 ₽</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ДОПОЛНИТЕЛЬНЫЕ ФИЛЬМЫ -->
+    <section class="extra-movies">
+        <div class="container extra-movies-grid">
+
+            <article class="extra-movie-card">
+
+                <div class="extra-movie-info">
+
+                    <div class="extra-movie-poster">
+                        <span class="extra-poster-badge">КАННЫ</span>
+                        <img src="images/anatomy.png" alt="Анатомия падения">
+                    </div>
+
+                    <div class="extra-movie-description">
+                        <p class="extra-movie-label">
+                            АВТОРСКОЕ КИНО · ЗАЛ КАМЕРНЫЙ
+                        </p>
+
+                        <h3>Анатомия падения</h3>
+
+                        <p class="extra-movie-meta">
+                            Франция · Триллер, Драма · 152 мин · 18+
+                        </p>
+
+                        <p class="extra-movie-text">
+                            Загадочная смерть в шале во Французских Альпах перерастает
+                            в изощрённое судебное расследование семейных тайн.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="extra-movie-sessions">
+                    <div class="extra-session">
+                        <span>17:40</span>
+                        <small>Камерный · 950 ₽</small>
+                    </div>
+
+                    <div class="extra-session">
+                        <span>20:30</span>
+                        <small>Prime Club · 1 200 ₽</small>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="extra-movie-card">
+
+                <div class="extra-movie-info">
+
+                    <div class="extra-movie-poster">
+                        <span class="extra-poster-badge">6+</span>
+                        <img src="images/wild-robot.png" alt="Дикий робот">
+                    </div>
+
+                    <div class="extra-movie-description">
+                        <p class="extra-movie-label family-label">
+                            СЕМЕЙНЫЙ ПОКАЗ · DOLBY ATMOS
+                        </p>
+
+                        <h3>Дикий Робот</h3>
+
+                        <p class="extra-movie-meta">
+                            США · Анимация, Приключения · 102 мин
+                        </p>
+
+                        <p class="extra-movie-text">
+                            Трогательная история робота Роз, потерпевшего крушение
+                            на необитаемом острове и ставшего родителем для
+                            осиротевшего гусёнка.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="extra-movie-sessions">
+                    <div class="extra-session">
+                        <span>12:00</span>
+                        <small>Семейный · 650 ₽</small>
+                    </div>
+
+                    <div class="extra-session">
+                        <span>14:30</span>
+                        <small>Дневной · 800 ₽</small>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ТЕХНОЛОГИИ КИНОТЕАТРА -->
+    <section class="cinema-tech" id="cinema-tech">
+        <div class="container">
+
+            <div class="cinema-tech-heading">
+                <p class="eyebrow">ТЕХНОЛОГИИ КИНЕМАТОГРАФА</p>
+
+                <h2 class="cinema-tech-title">
+                    Совершенство звука и<br>комфорта
+                </h2>
+
+                <p class="cinema-tech-description">
+                    Каждый зрительный зал кинотеатра Lumière спроектирован
+                    по акустическим стандартам Джорджа Лукаса с индивидуальной
+                    климатической зоной и премиальной мебелью ручной сборки.
+                </p>
+            </div>
+
+            <div class="cinema-tech-grid">
+
+                <article class="tech-card">
+
+                    <div class="tech-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.8"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="5" width="15" height="14" rx="1.5"/>
+                            <path d="M18 9l4-3v12l-4-3"/>
+                        </svg>
+                    </div>
+
+                    <p class="tech-label">ФЛАГМАНСКИЙ ЭКРАН</p>
+                    <h3 class="tech-card-title">IMAX Laser 4K</h3>
+
+                    <p class="tech-card-description">
+                        Гигантский экран высотой с 7-этажный дом. Сдвоенные
+                        лазерные проекторы Barco обеспечивают безупречный
+                        уровень черного цвета и 12-канальную пространственную
+                        звуковую сцену.
+                    </p>
+
+                    <div class="tech-image">
+                        <img src="images/imax-laser.jpg"
+                             alt="Премиальный кинозал IMAX Laser 4K"
+                             loading="lazy">
+                    </div>
+
+                </article>
+
+                <article class="tech-card">
+
+                    <div class="tech-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.8"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12V8a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+                            <path d="M14 12V8a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+                            <path d="M3 12h18v7H3z"/>
+                            <path d="M5 19v2M19 19v2M10 12V9h4v3"/>
+                        </svg>
+                    </div>
+
+                    <p class="tech-label">ПЕРВЫЙ КЛАСС</p>
+                    <h3 class="tech-card-title">VIP Lounge &amp; Bed Cinema</h3>
+
+                    <p class="tech-card-description">
+                        Широкие спальные ложи и парные реклайнеры с электроприводом.
+                        Мягкие пледы из монгольского кашемира, индивидуальное меню
+                        от шеф-повара и бесшумный консьерж-сервис.
+                    </p>
+
+                    <div class="tech-image">
+                        <img src="images/vip-lounge.jpg"
+                             alt="Комфортные спальные места VIP-кинозала"
+                             loading="lazy">
+                    </div>
+
+                </article>
+
+                <article class="tech-card">
+
+                    <div class="tech-icon">
+                        <svg viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.8"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2.5" y="4" width="19" height="16" rx="2"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="12" cy="12" r="1"/>
+                            <path d="M5.5 7h1M17.5 17h1"/>
+                        </svg>
+                    </div>
+
+                    <p class="tech-label">АУДИОФИЛЬНЫЙ СТАНДАРТ</p>
+                    <h3 class="tech-card-title">Dolby Atmos Studio</h3>
+
+                    <p class="tech-card-description">
+                        64 независимых аудиоканала с потолочными сабвуферами
+                        создают живой трёхмерный звуковой купол. Вы слышите
+                        каждое движение ветра и направление пули в пространстве.
+                    </p>
+
+                    <div class="tech-image">
+                        <img src="images/dolby-atmos.jpg"
+                             alt="Кинозал с объёмной системой звука Dolby Atmos"
+                             loading="lazy">
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- КЛУБ ПРИВИЛЕГИЙ -->
+    <section class="privilege-section" id="offers">
+        <div class="container">
+
+            <div class="privilege-card">
+
+                <div class="privilege-content">
+
+                    <p class="privilege-eyebrow">ПРОГРАММА ПРИВИЛЕГИЙ</p>
+                    <h2 class="privilege-title">Lumière Privilege Club</h2>
+
+                    <p class="privilege-description">
+                        Вступите в закрытое сообщество ценителей кинематографа.
+                        Получайте баллы с каждого билета и заказа в баре, бронируйте
+                        закрытые предпоказы и получайте комплимент от сомелье при
+                        каждом посещении. Откройте для себя новый уровень комфорта,
+                        эксклюзивного сервиса и привилегий Lumière.
+                    </p>
+
+                    <div class="privilege-benefits">
+
+                        <article class="privilege-benefit">
+                            <strong>до 20%</strong>
+                            <p>Кэшбэк баллами за сеансы и заказы в баре</p>
+                        </article>
+
+                        <article class="privilege-benefit">
+                            <strong>0 ₽</strong>
+                            <p>Бронь закрытых лож без залога</p>
+                        </article>
+
+                        <article class="privilege-benefit">
+                            <strong>VIP</strong>
+                            <p>Приглашения на премьеры и специальные показы</p>
+                        </article>
+
+                    </div>
+
+                    <form class="privilege-form" id="privilege-form">
+
+                        <label class="privilege-visually-hidden"
+                               for="privilege-phone">
+                            Номер телефона
+                        </label>
+
+                        <input id="privilege-phone"
+                               class="privilege-input"
+                               type="tel"
+                               name="phone"
+                               placeholder="+7 (___) ___-__-__"
+                               autocomplete="tel"
+                               required>
+
+                        <button class="privilege-button" type="submit">
+                            Вступить в клуб
+                        </button>
+
+                    </form>
+
+                    <p class="privilege-form-message"
+                       id="privilege-message"
+                       aria-live="polite"></p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+
+            <div class="faq-heading">
+                <p class="faq-eyebrow">ОТВЕТЫ НА ВОПРОСЫ</p>
+                <h2 class="faq-title">Часто задаваемые вопросы</h2>
+
+                <p class="faq-subtitle">
+                    Всё о бронировании, парковке и правилах кинотеатра Lumière
+                </p>
+            </div>
+
+            <div class="faq-list">
+
+                <details class="faq-item">
+                    <summary>Как вернуть или обменять электронный билет?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Условия возврата зависят от времени до начала сеанса
+                            и правил покупки. Обратитесь в службу поддержки,
+                            указав номер заказа и электронную почту, использованную
+                            при бронировании. Возможность обмена уточняется индивидуально.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Предоставляется ли бесплатная парковка для гостей?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Кинотеатр находится в ТЦ «Неглинная». Условия парковки,
+                            тарифы и возможные льготы для гостей уточняйте у
+                            администрации торгового центра перед визитом.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="bar">
+                    <summary>
+                        Можно ли заказать блюда и напитки прямо в зал во время фильма?
+                    </summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            В VIP-залах Lumière предусмотрен сервис заказа блюд
+                            и напитков к креслу. Доступность меню и обслуживания
+                            зависит от выбранного зала и конкретного сеанса.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Есть ли подарочные сертификаты на закрытый показ?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Возможность оформления подарочного сертификата и
+                            организации закрытого показа можно уточнить у
+                            администрации Lumière. Доступные форматы и условия
+                            согласовываются индивидуально.
+                        </p>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ПОДВАЛ САЙТА -->
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-column footer-about">
+
+                <a href="#" class="footer-logo">LUMIÈRE</a>
+
+                <p class="footer-description">
+                    Премиальный кинотеатр и клуб закрытых просмотров.
+                    Погружение в кинематографическое искусство нового поколения.
+                </p>
+
+                <ul class="footer-contacts">
+                    <li>
+                        <span class="footer-icon">⌖</span>
+                        <span>Трубная пл., 2, ТЦ «Неглинная», 3 этаж</span>
+                    </li>
+
+                    <li>
+                        <span class="footer-icon">⌕</span>
+                        <a href="tel:+74958902100">+7 (495) 890-21-00</a>
+                    </li>
+
+                    <li>
+                        <span class="footer-icon">◷</span>
+                        <span>Ежедневно: 10:00 — 04:00</span>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3 class="footer-title">Форматы залов</h3>
+
+                <ul class="footer-list footer-formats">
+                    <li>IMAX Laser с 12-канальным звуком</li>
+                    <li>Dolby Atmos Premier Suite</li>
+                    <li>VIP Private Lounges (персональный сервис)</li>
+                    <li>Bed Cinema &amp; First Class Recliners</li>
+                </ul>
+
+                <a href="#cinema-tech" class="footer-highlight">
+                    <span>▤</span> Схема кинотеатра и залов
+                </a>
+
+            </div>
+
+            <div class="footer-column footer-club">
+
+                <h3 class="footer-title">Lumière Club</h3>
+
+                <p class="footer-description">
+                    Привилегии закрытого киноклуба: пред-премьерные показы,
+                    закрытые дискуссии и консьерж-бронь лож.
+                </p>
+
+                <a href="#offers" class="footer-club-link">
+                    Узнать о привилегиях
+                </a>
+
+            </div>
+
+            <div class="footer-column footer-apps">
+
+                <h3 class="footer-title">Мобильное приложение</h3>
+
+                <p class="footer-description">
+                    Билеты без очередей, выбор блюд в зал и удобный электронный пропуск.
+                </p>
+
+                <a href="#offers" class="app-link">
+                    <span class="app-icon">▣</span>
+                    <span>
+                        <small>ДОСТУПНО В</small>
+                        <strong>App Store</strong>
+                    </span>
+                </a>
+
+                <a href="#offers" class="app-link">
+                    <span class="app-icon">◆</span>
+                    <span>
+                        <small>ЗАГРУЗИТЕ В</small>
+                        <strong>Google Play</strong>
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2025 LUMIÈRE CINEMA. Все права защищены.
+                Премиальный кинопоказ и кейтеринг.
+            </p>
+
+            <nav class="footer-legal" aria-label="Правовая информация">
+                <a href="#privacy">Конфиденциальность</a>
+                <a href="#rules">Правила посещения</a>
+                <a href="tel:+74958902100">Контакты</a>
+            </nav>
+
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
